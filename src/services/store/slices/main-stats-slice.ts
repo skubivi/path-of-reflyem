@@ -40,9 +40,9 @@ export const subClassSlice = createSlice({
         selectRace: (state, action: PayloadAction<ERaces>) => {
             state.race = action.payload
             const baseStats = getBaseStats(action.payload)
-            state.health = baseStats.health
-            state.mana = baseStats.mana
-            state.stamina = baseStats.stamina
+            state.health = baseStats.health + state.pointsInHealth * STATS_PER_LEVEL
+            state.mana = baseStats.mana + state.pointsInMana * STATS_PER_LEVEL
+            state.stamina = baseStats.stamina + state.pointsInStamina * STATS_PER_LEVEL
             state.poisonRes = baseStats.poisonRes
             state.diseaseRes = baseStats.diseaseRes
             state.fireRes = baseStats.fireRes
@@ -106,7 +106,7 @@ export const subClassSlice = createSlice({
         },
         setMana: (state, action: PayloadAction<number>) => {
             state.mana = getBaseStats(state.race).mana + action.payload * STATS_PER_LEVEL
-            state.mana = action.payload
+            state.pointsInMana = action.payload
         },
         increaseStamina: (state) => {
             if (checkStatsWithLevel(state.level, state.pointsInHealth, state.pointsInMana, state.pointsInStamina) > 0) {
@@ -122,7 +122,7 @@ export const subClassSlice = createSlice({
         },
         setStamina: (state, action: PayloadAction<number>) => {
             state.stamina = getBaseStats(state.race).stamina + action.payload * STATS_PER_LEVEL
-            state.stamina = action.payload
+            state.pointsInStamina = action.payload
         },
     }
 })

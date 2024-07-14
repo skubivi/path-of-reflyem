@@ -26,16 +26,16 @@ const MainHeader = () => {
                     alignItems: 'center'
                 }}
             >
-                <Button variant="contained">
+                <Button variant="contained" disabled>
                     Назад
                 </Button>
                 <Typography>
                     Текущий билд: пампарам
                 </Typography>
-                <Button variant="contained">
+                <Button variant="contained" disabled>
                     Сохранить
                 </Button>
-                <Button variant="contained">
+                <Button variant="contained" disabled>
                     Сохранить как
                 </Button>
             </Box>

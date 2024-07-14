@@ -15,3 +15,6 @@ export const BASE_STATS: IBaseStats = {
     diseaseRes: 0,
     poisonRes: 0
 }
+export const MAX_MANA_SHIELD = 75
+export const STARTING_MAX_MANA_SHIELD = 20
+export const MANA_PER_MAX_MANA_SHIELD = 30

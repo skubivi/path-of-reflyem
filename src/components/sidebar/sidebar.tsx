@@ -1,7 +1,9 @@
 import { Box, Button } from "@mui/material"
 import StatsShower from "./components/stats-shower/stats-shower"
+import { useNavigate } from "react-router-dom"
 
 const SideBar = () => {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -25,21 +27,25 @@ const SideBar = () => {
             >
                 <Button
                     variant="contained"
+                    disabled
                 >
                     Импорт/Экспорт
                 </Button>
                 <Button
                     variant="contained"
+                    disabled
                 >
                     Навыки
                 </Button>
                 <Button
                     variant="contained"
+                    disabled
                 >
                     Вещи
                 </Button>
                 <Button
                     variant="contained"
+                    onClick={() => navigate('/bufs')}
                 >
                     Бафы
                 </Button>

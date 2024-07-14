@@ -7,13 +7,17 @@ import { Provider } from 'react-redux'
 import { store } from './services/store/store.ts'
 import { ThemeProvider } from '@mui/material'
 import { theme } from './styles/theme/theme.ts'
+import BufsPage from './pages/bufs-page/bufs-page.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      
+      {
+        path: '/bufs',
+        element: <BufsPage />
+      }
     ]
   }
 ])

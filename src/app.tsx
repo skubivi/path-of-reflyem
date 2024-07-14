@@ -23,7 +23,14 @@ const App = () => {
         }}
       >
         <SideBar />
-        <Outlet />
+        <Box
+          sx={{
+            flexGrow: 1,
+            padding: 2.5
+          }}
+        >
+          <Outlet />
+        </Box>
       </Box>
     </Box>
   )
