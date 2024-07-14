@@ -17,40 +17,34 @@ const StatsShower = () => {
                 Характеристики:
             </Typography>
             <Typography>
-                Здоровье: {finalStats.health}
+                Здоровье: {finalStats.health}хп
             </Typography>
             <Typography>
-                Магия: {finalStats.mana}
+                Магия: {finalStats.mana}мп
             </Typography>
             <Typography>
-                Запас сил: {finalStats.stamina}
+                Запас сил: {finalStats.stamina}ст
             </Typography>
             <Typography>
-                Сопротивление огню: {finalStats.fireRes}
+                Сопротивление огню: {finalStats.fireRes}%
             </Typography>
             <Typography>
-                Сопротивление молнии: {finalStats.lightningRes}
+                Сопротивление молнии: {finalStats.lightningRes}%
             </Typography>
             <Typography>
-                Сопротивление холоду: {finalStats.coldRes}
+                Сопротивление холоду: {finalStats.coldRes}%
             </Typography>
             <Typography>
-                Сопротивление тьме: {finalStats.darkRes}
+                Сопротивление тьме: {finalStats.darkRes}%
             </Typography>
             <Typography>
-                Сопротивление яду: {finalStats.poisonRes}
+                Сопротивление яду: {finalStats.poisonRes}%
             </Typography>
             <Typography>
-                Сопротивление болезни: {finalStats.diseaseRes}
+                Сопротивление болезни: {finalStats.diseaseRes}%
             </Typography>
             <Typography>
-                Физическое сверхсопротивление: {finalStats.physSuperresistance}
-            </Typography>
-            <Typography>
-                Магическое сверхсопротивление: {finalStats.magickSuperresistance}
-            </Typography>
-            <Typography>
-                Магический щит: {finalStats.manaShield}
+                Магический щит: {finalStats.manaShield}%
             </Typography>
         </Box>
     )

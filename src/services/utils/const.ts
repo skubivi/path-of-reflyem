@@ -13,7 +13,5 @@ export const BASE_STATS: IBaseStats = {
     lightningRes: 0,
     coldRes: 0,
     diseaseRes: 0,
-    poisonRes: 0,
-    physSuperresistance: 0,
-    magickSuperresistance: 0
+    poisonRes: 0
 }

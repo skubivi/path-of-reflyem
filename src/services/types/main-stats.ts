@@ -14,9 +14,7 @@ export interface IBaseStats {
     lightningRes: number,
     coldRes: number,
     darkRes: number,
-    manaShield: number,
-    physSuperresistance: number,
-    magickSuperresistance: number
+    manaShield: number
 }
 
 export interface IOptions {
