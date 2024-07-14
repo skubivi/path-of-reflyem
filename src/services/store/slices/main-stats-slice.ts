@@ -50,8 +50,6 @@ export const subClassSlice = createSlice({
             state.coldRes = baseStats.coldRes
             state.darkRes = baseStats.darkRes
             state.manaShield = baseStats.manaShield
-            state.physSuperresistance = baseStats.physSuperresistance
-            state.magickSuperresistance = baseStats.magickSuperresistance
         },
         selectStandingStone: (state, action: PayloadAction<EStandingStones>) => {
             state.standingStone = action.payload
