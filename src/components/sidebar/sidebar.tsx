@@ -49,6 +49,19 @@ const SideBar = () => {
                 >
                     Бафы
                 </Button>
+                <Button
+                    variant="contained"
+                    disabled
+                    onClick={() => navigate('/skillpoints')}
+                >
+                    Скилпоинты
+                </Button>
+                <Button
+                    variant="contained"
+                    onClick={() => navigate('/configuration')}
+                >
+                    Настройки
+                </Button>
             </Box>
             <StatsShower />
         </Box>

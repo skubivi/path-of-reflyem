@@ -8,6 +8,7 @@ import { store } from './services/store/store.ts'
 import { ThemeProvider } from '@mui/material'
 import { theme } from './styles/theme/theme.ts'
 import BufsPage from './pages/bufs-page/bufs-page.tsx'
+import ConfigurationPage from './pages/configuration-page/configuration-page.tsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/bufs',
         element: <BufsPage />
+      },
+      {
+        path: '/configuration',
+        element: <ConfigurationPage />
       }
     ]
   }

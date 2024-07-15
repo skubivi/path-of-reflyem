@@ -26,7 +26,7 @@ const initialState: IMainStats = {
     ...baseStats
 }
 
-export const subClassSlice = createSlice({
+export const mainStatsSlice = createSlice({
     name: 'mainStats',
     initialState,
     reducers: {
@@ -147,6 +147,6 @@ export const {
     setHealth,
     setMana,
     setStamina
-} = subClassSlice.actions
+} = mainStatsSlice.actions
 
-export default subClassSlice.reducer
+export default mainStatsSlice.reducer
