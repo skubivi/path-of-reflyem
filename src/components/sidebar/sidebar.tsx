@@ -1,6 +1,7 @@
 import { Box, Button } from "@mui/material"
 import StatsShower from "./components/stats-shower/stats-shower"
 import { useNavigate } from "react-router-dom"
+import { EPageRoutes } from "../../services/enums/page-routes"
 
 const SideBar = () => {
     const navigate = useNavigate()
@@ -45,20 +46,19 @@ const SideBar = () => {
                 </Button>
                 <Button
                     variant="contained"
-                    onClick={() => navigate('/bufs')}
+                    onClick={() => navigate(EPageRoutes.BufsPage)}
                 >
                     Бафы
                 </Button>
                 <Button
                     variant="contained"
-                    disabled
-                    onClick={() => navigate('/skillpoints')}
+                    onClick={() => navigate(EPageRoutes.SkillPointsPage)}
                 >
                     Скилпоинты
                 </Button>
                 <Button
                     variant="contained"
-                    onClick={() => navigate('/configuration')}
+                    onClick={() => navigate(EPageRoutes.ConfigurationPage)}
                 >
                     Настройки
                 </Button>

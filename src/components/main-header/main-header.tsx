@@ -3,10 +3,10 @@ import SubClassSelect from "./components/sub-class-select/sub-class-select"
 import RaceSelect from "./components/race-select/race-select"
 import StandingStoneSelect from "./components/standing-stone-select/standing-stone-select"
 import LevelInput from "./components/level-input/level-input"
-import { useGetRemainingSkillpoints } from "../../hooks/use-get-remaining-skillpoints"
+import { useGetCollectedSkillpoints } from "../../hooks/use-get-skillpoints/use-get-collected-skillpoints"
 
 const MainHeader = () => {
-    const remainingSkillpoints = useGetRemainingSkillpoints()
+    const collectedSkillpoints = useGetCollectedSkillpoints()
     return (
         <Box
             sx={{
@@ -50,7 +50,7 @@ const MainHeader = () => {
                 }}
             >
                 <Typography>
-                    Осталось скилпоинтов: {remainingSkillpoints}
+                    {`Скилпоинты: 0/${collectedSkillpoints}`}
                 </Typography>
                 <LevelInput />
                 <RaceSelect />

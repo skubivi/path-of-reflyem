@@ -9,6 +9,8 @@ import { ThemeProvider } from '@mui/material'
 import { theme } from './styles/theme/theme.ts'
 import BufsPage from './pages/bufs-page/bufs-page.tsx'
 import ConfigurationPage from './pages/configuration-page/configuration-page.tsx'
+import SkillPointsPage from './pages/skillpoints-page/skillpoints-page.tsx'
+import { EPageRoutes } from './services/enums/page-routes.ts'
 
 const router = createBrowserRouter([
   {
@@ -16,12 +18,16 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/bufs',
+        path: EPageRoutes.BufsPage,
         element: <BufsPage />
       },
       {
-        path: '/configuration',
+        path: EPageRoutes.ConfigurationPage,
         element: <ConfigurationPage />
+      },
+      {
+        path: EPageRoutes.SkillPointsPage,
+        element: <SkillPointsPage />
       }
     ]
   }
