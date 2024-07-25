@@ -44,7 +44,9 @@ export const skillPointsForBossesSlice = createSlice({
             else state.skillPointsForDvemers = action.payload
         },
         addBossToCollected: (state, action: PayloadAction<number>) => {
-            state.collectedId = [...state.collectedId, action.payload]
+            const bossIndex = state.collectedId.findIndex(element => element === action.payload)
+            if (bossIndex === -1)
+                state.collectedId = [...state.collectedId, action.payload]
         },
         removeBossFromCollected: (state, action: PayloadAction<number>) => {
             const bossIndex = state.collectedId.findIndex(element => element === action.payload)

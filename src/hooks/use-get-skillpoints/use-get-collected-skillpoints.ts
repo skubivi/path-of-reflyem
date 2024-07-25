@@ -1,6 +1,7 @@
 import { EStandingStones } from "../../services/enums/standing-stones"
 import { getSkillPointsForLevels } from "../../services/utils/get-skillpoints-for-levels"
 import { useTypedSelector } from "../use-typed-selector"
+import { useGetOtherSkillpoints } from "./use-get-other-skillpoints"
 
 export const useGetCollectedSkillpoints = () => {
     const level = useTypedSelector((state) => state.mainStat.level)
@@ -19,6 +20,8 @@ export const useGetCollectedSkillpoints = () => {
         + state.skillPointsForBosses.skillPointsForDvemers
     )
 
-    const result = skillPointsForLevel + skillPointsForBosses
+    const otherSkillPoints = useGetOtherSkillpoints()
+
+    const result = skillPointsForLevel + skillPointsForBosses + otherSkillPoints
     return result
 }
